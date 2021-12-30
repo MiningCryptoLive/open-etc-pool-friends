@@ -1,19 +1,20 @@
-<div class="jumbotron-brand">
+<div class="jumbotron">
   <div class="container">
+    <div class="note note-info">
     <p class="lead">Pool always pays full block rewards including TX fees and uncle rewards.</p>
     <strong>
-      Block maturity requires <u>up to</u> </strong> <span class="label label-success">520</span> <strong>blocks.
-      Usually it's less indeed.
+      Block maturity requires <u>up to</u> </strong> <span class="label label-success">120</span> <strong>blocks.
+      
     </strong>
   </div>
 </div>
-
+</div>
 <div class="container">
+<div class="note note-info">
   {{high-charts mode=stockChart chartOptions=chartOptions content=chartData}}
   {{#if model.luck}}
     {{partial "luck"}}
   {{/if}}
-
   <ul class="nav nav-tabs">
     {{#active-li currentWhen='blocks.index' role='presentation'}}
       {{#link-to 'blocks.index'}}Blocks <span class="badge alert-success">{{format-number model.maturedTotal}}</span>{{/link-to}}
@@ -26,4 +27,5 @@
     {{/active-li}}
   </ul>
   {{outlet}}
+</div>
 </div>

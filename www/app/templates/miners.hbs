@@ -1,10 +1,13 @@
-<div class="jumbotron-brand">
+<div class="jumbotron">
   <div class="container">
+   <div class="note note-info">
     <p class="lead">Total hashrate: {{format-hashrate model.hashrate}}.</p>
     <strong>Total miners:</strong> <span class="label label-info">{{model.minersTotal}}</span>
   </div>
 </div>
+</div>
 <div class="container">
+<div class="note note-info">
   {{#if model.miners}}
   <h4>Miners</h4>
   <div class="table-responsive">
@@ -30,4 +33,5 @@
   {{else}}
   <h3>No miners</h3>
   {{/if}}
+</div>
 </div>

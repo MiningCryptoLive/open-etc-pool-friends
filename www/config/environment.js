@@ -15,14 +15,14 @@ module.exports = function(environment) {
   
       APP: {
         // API host and port
-        ApiUrl: '//192.168.178.27//',
+        ApiUrl: '//etc.miningcrypto.live/',
   
         // HTTP mining endpoint
-        HttpHost: 'http://192.168.178.27',
+        HttpHost: 'http://etc.miningcrypto.live',
         HttpPort: 8888,
   
         // Stratum mining endpoint
-        StratumHost: 'example.net',
+        StratumHost: 'etc.miningcrypto.live',
         StratumPort: 8008,
   
         // The ETC network used (classic, mordor)

@@ -1,9 +1,11 @@
 {{outlet 'error' }}
-<div class="jumbotron-brand">
+<div class="jumbotron">
   <div class="container">
     <div class="row">
-      <div class="col-md-4 stats">
+      <div class="col-md-4">
+	<div class="note note-info">
         <div style="display: block;">
+	    <i class="fas fa-wallet"></i><strong> Your Wallet Info: </strong> <a href="https://blockscout.com/etc/mainnet/address/{{model.login}}" target="_blank">Click Here</a><br>
           <i class="fa fa-cloud"></i> Immature Balance: <span>{{format-balance model.stats.immature}}</span><br>
           <small>Preliminary balance awaiting blocks to mature.</small>
         </div>
@@ -19,7 +21,9 @@
         <div style="display: block;"><i class="fa fa-money"></i> Total Paid: <span>{{format-balance model.stats.paid}}</span></div>
         <div style="display: block;"><i class="fa fa-money"></i> Last 24h Reward: <span>{{format-balance model.24hreward}}</span></div>
       </div>
-      <div class="col-md-4 stats">
+	</div>
+      <div class="col-md-4">
+	<div class="note note-info">
         {{#if model.stats.lastShare}}
         <div style="display: block;"><i class="fa fa-clock-o"></i>
           Last Share Submitted: <span>{{format-relative (seconds-to-ms (string-to-int model.stats.lastShare))}}</span>
@@ -29,7 +33,9 @@
         <div style="display: block;"><i class="fa fa-tachometer"></i> Hashrate (30m): <span>{{format-hashrate model.currentHashrate}}</span></div>
         <div style="display: block;"><i class="fa fa-tachometer"></i> Hashrate (3h): <span>{{format-hashrate model.hashrate}}</span></div>
       </div>
-      <div class="col-md-4 stats">
+</div>
+      <div class="col-md-4">
+	<div class="note note-info">
         <div style="display: block;"><i class="fa fa-tachometer"></i> Blocks Found: <span>{{format-number model.stats.blocksFound fallback='0'}}</span></div>
         <div style="display: block;"><i class="fa fa-paper-plane-o"></i> Total Payments: <span>{{format-number model.paymentsTotal}}</span></div>
         <div style="display: block;">
@@ -44,8 +50,9 @@
     </div>
   </div>
 </div>
-
+</div>
 <div class="container">
+<div class="note note-info">
   <ul class="nav nav-tabs">
     {{#active-li currentWhen='account.index' role='presentation'}}
       {{#link-to 'account.index'}}Workers <span class="badge alert-danger">{{model.workersOffline}}</span>{{/link-to}}
@@ -58,5 +65,5 @@
     {{/active-li}}
   </ul>
 </div>
-
+</div>
 {{outlet}}

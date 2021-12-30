@@ -1,10 +1,13 @@
-<div class="jumbotron-brand">
+<div class="jumbotron">
   <div class="container">
-    <p class="lead">Pool always pays tx fees from it's own pocket for now.</p>
+    <div class="note note-info">	
+    <p class="lead">Pool always pays tx fees.</p>
     <strong>Total payments sent:</strong> <span class="label label-info">{{model.paymentsTotal}}</span>
   </div>
 </div>
+</div>
 <div class="container">
+<div class="note note-info">
   {{#if model.payments}}
   <h4>Latest Payouts</h4>
   <div class="table-responsive">
@@ -36,4 +39,5 @@
   {{else}}
   <h3>No payouts yet</h3>
   {{/if}}
+</div>
 </div>

@@ -1,9 +1,12 @@
 <div class="jumbotron">
   <div class="container">
+    <div class="note note-info">
     <strong>Miners on the list:</strong> <span class="label label-info">{{model.findersTotal}}</span>
   </div>
 </div>
+</div>
 <div class="container">
+<div class="note note-info">
   {{#if model.finders}}
   <h4>Block finders</h4>
   <table class="table table-condensed table-striped">
@@ -25,4 +28,5 @@
   {{else}}
   <h3>No blocks yet</h3>
   {{/if}}
+</div>
 </div>
